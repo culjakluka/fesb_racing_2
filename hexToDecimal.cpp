@@ -1,3 +1,34 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <cmath>
+
+using namespace std;
+
+string hexInput();
+int hexToDecimal(string);
+
+int main() {
+	string hexNum = "";
+	int decNum = 0;
+
+	hexNum = hexInput();
+
+	decNum = hexToDecimal(hexNum);
+
+	cout << endl << "Broj " << hexNum << " u dekadskom sustavu je: " << decNum << endl;
+
+	return EXIT_SUCCESS;
+}
+
+string hexInput() {
+	string hexInput;
+	cout << "Unesite hexadecimalni broj: ";
+	cin >> hexInput;
+	
+	return hexInput;
+}
+
 int hexToDecimal(string hexNum) {
 	int decNum = 0;
 	char c;
